@@ -10,16 +10,16 @@ const userSchema = new Schema({
         type: String,
         required: true,
     },
-    post:[
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "Student"
-        },
-    date: {
-        date: Date,
-        default: Date.now,
-    }
-    ]
+    posts:[{
+            post:{
+                type: mongoose.Schema.Types.ObjectId,
+                ref: "Student"
+            },
+            date: {
+                date: Date,
+                default: Date.now,
+            },
+        }],
 })
 
 const User = mongoose.model("User", userSchema)
