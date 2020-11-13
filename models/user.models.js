@@ -13,7 +13,7 @@ const userSchema = new Schema({
     posts:[{
             post:{
                 type: mongoose.Schema.Types.ObjectId,
-                ref: "Student"
+                ref: "Post"
             },
             date: {
                 date: Date,
