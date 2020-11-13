@@ -3,11 +3,11 @@ const router = require('express').Router();
 const passport = require('../lib/passportConfig');
 
 router.get('/register', (req,res) => {
-    res.render("auth/register");
+    res.render("auth/register", { layout: "auth_layout" });
 });
 
 router.get('/login', (req,res) => {
-    res.render("auth/login");
+    res.render("auth/login", { layout: "auth_layout" });
 });
 
 router.post('/register', async(req,res) => {
