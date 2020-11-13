@@ -9,8 +9,19 @@ const userSchema = new Schema({
     password:{
         type: String,
         required: true,
+    },
+    post:[
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Student"
+        },
+    date: {
+        date: Date,
+        default: Date.now,
     }
-    
-
-
+    ]
 })
+
+const User = mongoose.model("User", userSchema)
+
+module.exports = User
